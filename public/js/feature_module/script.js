@@ -96,7 +96,7 @@ export default () => {
 
   new ProjectShowCase(
     "E-commerce Platform",
-    "public/assets/img/e-commerce.png",
+    "/assets/img/e-commerce.png",
     "client",
     "2025",
     "Full-featured e-commerce solution. Includes product catalog, shopping cart, secure payment integration, order management, customer reviews, and admin dashboard.",
