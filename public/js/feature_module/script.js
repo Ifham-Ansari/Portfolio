@@ -59,7 +59,7 @@ export default () => {
   
   new ProjectShowCase(
     "Ez Qanoon – AI Legal Chatbot for Pakistani Laws",
-    "/assets/img/ezqanoon.png",
+    "/assets/img/ez_qanoon.png",
     "Client",
     "2025",
     "Ez Qanoon is an AI-powered legal chatbot built specifically for Pakistani laws. The system is trained on scraped judgments, statutes, and legal documents collected from authentic Pakistani legal sources. It allows users to ask legal questions in natural language and receive accurate, context-aware explanations, summaries, and relevant legal references based on real Pakistani case law.",
