@@ -49,7 +49,7 @@ export default () => {
   // MERN Stack Projects
   new ProjectShowCase(
     "Brand Wings - Marketing Agency",
-    "public/assets/img/image.png",
+    "/assets/img/image.png",
     "client",
     "2025",
     "A comprehensive marketing agency platform built with MERN stack. Features include campaign management, client portfolio, analytics dashboard, and real-time collaboration tools for marketing teams.",
@@ -58,7 +58,7 @@ export default () => {
 
   new ProjectShowCase(
     "Doctor AI – Medical Chatbot for Diagnosis & Doctor Recommendation",
-    "public/assets/img/image-copy.png",
+    "/assets/img/image-copy.png",
     "Personal",
     "2025",
     "Doctor AI is an intelligent healthcare chatbot designed to assist users in preliminary medical diagnosis & recommend suitable doctors based on their symptoms. The chatbot uses OpenAI’s models to interpret user-reported symptoms and determine the appropriate medical specialization. It then matches the identified specialization with the nearest available doctor.",
@@ -67,7 +67,7 @@ export default () => {
 
   new ProjectShowCase(
     "Cybersecurity Monitoring and Analytics Dashboard",
-    "public/assets/img/SOC.png",
+    "/assets/img/SOC.png",
     "Client",
     "2025",
     "Built a SIEM platform to collect, process, and visualize system and network logs for proactive security monitoring. Features include real-time log ingestion, threat detection using correlation rules, interactive dashboards for visualizing security events, and alerting mechanisms for incident response.",
@@ -76,7 +76,7 @@ export default () => {
 
   new ProjectShowCase(
     "RAG-Based Semantic QA Dashboard",
-    "public/assets/img/rag.png",
+    "/assets/img/rag.png",
     "Client",
     "2025",
     "An intelligent document assistant that lets users upload and preview files, then ask smart questions using semantic (RAG-based) search. It automatically generates concise summaries and key points, allows PDF downloads of results, and supports light/dark mode for a comfortable reading experience.",
@@ -87,7 +87,7 @@ export default () => {
   // Frontend Projects
   new ProjectShowCase(
     "Seo Jetz - Digital Marketing",
-    "public/assets/img/setjetz.png",
+    "/assets/img/setjetz.png",
     "client",
     "2024",
     "SEO services website built with modern frontend technologies. Features include service showcase, case studies, SEO tools, client testimonials, and lead generation forms with analytics integration.",
