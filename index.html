@@ -281,6 +281,31 @@ A versatile AI Engineer with expertise across machine learning, deep learning, a
           <span class="block text-sm text-text_two_clr sm:text-center">© 2026 Portfolio™ </a>- All Rights Reserved.</span>
       </div>
     </footer>
+    
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-5">
+      <div id="modalOverlay" class="absolute inset-0 bg-black/40 backdrop-blur-md"></div>
+      <div class="relative glass-card border border-pri_clr/20 p-8 sm:p-12 rounded-3xl shadow-[0_0_50px_-12px_rgba(108,99,255,0.5)] max-w-md w-full text-center grid gap-6 transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent">
+        <!-- Close Button (X) -->
+        <button id="closeModalIcon" class="absolute top-4 right-4 size-10 flex items-center justify-center rounded-full hover:bg-pri_clr/10 transition-colors group">
+          <svg viewBox="0 0 24 24" class="size-6 fill-text_two_clr group-hover:fill-pri_clr"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"></path></svg>
+        </button>
+        
+        <div class="size-24 bg-gradient-to-br from-pri_clr/30 to-pri_clr/5 rounded-full flex items-center justify-center mx-auto shadow-inner">
+          <svg viewBox="0 0 24 24" class="size-12 fill-pri_clr drop-shadow-lg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"></path></svg>
+        </div>
+        
+        <div>
+          <h2 class="text-3xl sm:text-4xl poppins-bold bg-gradient-to-r from-white to-text_two_clr bg-clip-text text-transparent">Message Sent!</h2>
+          <p class="text-text_two_clr montserrat_regular mt-3 text-lg">Thank you, <span id="successUserName" class="text-pri_clr font-bold"></span>! I'll get back to you as soon as possible.</p>
+        </div>
+        
+        <button id="closeModal" class="primary-button mx-auto mt-2">
+          <span class="primary-button-text px-4">Great!</span>
+          <span class="primary-button-circle"></span>
+        </button>
+      </div>
+    </div>
 
   </div>
 

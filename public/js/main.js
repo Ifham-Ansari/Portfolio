@@ -39,27 +39,79 @@ tilt_js();
 
 
 
-// send mail fix it later
+// Contact form simulation (No backend)
 import {user_passed_contact_info} from "./feature_module/contact.js";
+
+const successModal = document.getElementById("successModal");
+const closeModalBtn = document.getElementById("closeModal");
+const closeModalIcon = document.getElementById("closeModalIcon");
+const modalOverlay = document.getElementById("modalOverlay");
+const successUserName = document.getElementById("successUserName");
+
+function showSuccessModal() {
+    successModal.classList.remove("hidden");
+    successModal.classList.add("flex");
+    setTimeout(() => {
+        successModal.classList.add("modal-show");
+    }, 10);
+}
+
+function hideSuccessModal() {
+    successModal.classList.remove("modal-show");
+    setTimeout(() => {
+        successModal.classList.add("hidden");
+        successModal.classList.remove("flex");
+    }, 300);
+}
+
+closeModalBtn.addEventListener("click", hideSuccessModal);
+closeModalIcon.addEventListener("click", hideSuccessModal);
+modalOverlay.addEventListener("click", hideSuccessModal);
+
 user_passed_contact_info((userPassedDetail) => {
-    fetch("https://sendmail-server-production.up.railway.app/send", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userPassedDetail)
-    })
-    .then(raw => raw.json())
-    .then(data => {
-        mainSendResetForm(data);
-    })
-    .catch(err => console.log("Got Some Error", err.message))
+    const FORMSPREE_URL = "https://formspree.io/f/mqegzjep"; 
     
+    const sendBtn = document.getElementById("sendMail");
+    const originalText = sendBtn.querySelector(".primary-button-text").innerText;
+    
+    sendBtn.style.pointerEvents = "none";
+    sendBtn.querySelector(".primary-button-text").innerText = "Sending...";
+    
+    // Real Formspree submission
+    fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            _subject: "New Portfolio Submission",
+            Project: "MY FIRST PROJECT",
+            Form: "Portfolio Form",
+            Name: `${userPassedDetail.firstName} ${userPassedDetail.lastName}`,
+            Email: userPassedDetail.email,
+            Message: userPassedDetail.message
+        })
+    })
+    .then(() => finalizeSubmission(sendBtn, originalText, userPassedDetail))
+    .catch(err => {
+        console.error("Formspree Error:", err);
+        sendBtn.style.pointerEvents = "all";
+        sendBtn.querySelector(".primary-button-text").innerText = "Error! Try Again";
+        setTimeout(() => {
+            sendBtn.querySelector(".primary-button-text").innerText = originalText;
+        }, 3000);
+    });
 });
-function mainSendResetForm(user){
+
+function finalizeSubmission(sendBtn, originalText, userPassedDetail) {
+    sendBtn.style.pointerEvents = "all";
+    sendBtn.querySelector(".primary-button-text").innerText = originalText;
+    
+    // Reset form
     let inpField = document.querySelectorAll("#contactform input, #contactform textarea");
     inpField.forEach(e => e.value = "");
-    alert(`Thanks For Message ${user.firstName} ${user.lastName} !`)
+    
+    // Personalize and Show Success Modal
+    if (successUserName) successUserName.innerText = userPassedDetail.firstName;
+    showSuccessModal();
 }
 
 
