@@ -19,11 +19,11 @@ const projectsData = [
     link: "https://iwmcrm.com/"
   },
   {
-    name: "Brand Wings - Marketing Agency",
+    name: "BrandWings – Digital Marketing & Development Agency",
     url: "/assets/img/brandwings.png",
     type: "Client",
     year: "2024",
-    description: "A comprehensive marketing agency platform built with MERN stack. Features include campaign management, client portfolio, analytics dashboard, and real-time collaboration tools for marketing teams.",
+    description: "BrandWings is a full-service digital agency offering web development, branding, marketing, SEO, and AI chatbot solutions. It helps businesses grow online through innovative design and modern technologies. The platform serves global clients with customized digital strategies and focuses on increasing visibility and engagement.",
     link: "https://brandwings.online/"
   },
   {
@@ -39,27 +39,35 @@ const projectsData = [
     url: "/assets/img/whatsapp.png",
     type: "Clients/Office",
     year: "2024-25",
-    description: "A scalable suite of AI-powered WhatsApp chatbots designed for multiple industries including men’s fashion retail, aesthetic clinics, dental clinics, and real estate. The system automates customer conversations, lead qualification, appointment scheduling, product and property inquiries, and follow-ups using intelligent conversation flows. Built to improve response speed, reduce operational workload, and drive higher conversions through 24/7 automated engagement.",
+    description: "A scalable suite of AI-powered WhatsApp chatbots for industries like men’s fashion, aesthetic and dental clinics, and real estate. It automates customer conversations, lead qualification, appointment scheduling, inquiries, and follow-ups boosting response speed, reducing workload, and driving higher conversions through 24/7 intelligent engagement.",
     link: "https://github.com/Ifham-Ansari"
   },
   {
-    name: "E-commerce Platform",
+    name: "1and5tech - Elite PC Hardware & Gaming Store",
     url: "/assets/img/e-commerce.png",
     type: "Client",
     year: "2025",
-    description: "Full-featured e-commerce solution. Includes product catalog, shopping cart, secure payment integration, order management, customer reviews, and admin dashboard.",
+    description: "UK-based ecommerce store offering high-performance PC components and gaming accessories. It provides graphics cards, motherboards, RAM, cooling systems, and peripherals for gamers and PC builders. The platform focuses on quality hardware, competitive pricing, promotions, and secure GBP checkout for a reliable UK shopping experience.",
     link: "https://stage.1and5tech.com/"
+  },
+  {
+    name: "AI LMS - Job Focused AI Training System",
+    url: "/assets/img/ai_lms.png",
+    type: "Office",
+    year: "2025",
+    description: "An AI-powered platform that helps employees discover and learn AI tools relevant to their job roles. Users input their job description via audio, and the system recommends the best AI tools, provides tutorials and blogs in seconds, and generates quizzes to test understanding. Upon passing, users receive certifications, enabling quick upskilling in AI tools without prior knowledge.",
+    link: "https://ailms.thebotss.com/"
   },
   {
     name: "RAG-Based Semantic QA Dashboard",
     url: "/assets/img/raq_qa_img.png",
     type: "Personal",
     year: "2025",
-    description: "An intelligent document assistant that lets users upload and preview files, then ask smart questions using semantic (RAG-based) search. It automatically generates concise summaries and key points, allows PDF downloads of results, and supports light/dark mode for a comfortable reading experience.",
+    description: "An intelligent document assistant that enables users to upload and preview files, then ask smart, context-aware questions using semantic (RAG-based) search. It automatically generates concise summaries, extracts key points, and allows users to download results as PDFs. With support for light/dark mode, it offers a seamless and comfortable reading experience for efficient document analysis.",
     link: "https://rag-based-document-chatbot-summarizer-6opr.onrender.com/"
   },
   {
-    name: "Doctor AI – Chatbot that Diagnose Patient & Recommend Doctor",
+    name: "Doctor AI - Patient Diagnosis & Doctor Recommendation",
     url: "/assets/img/doctor_ai.png",
     type: "Personal(FYP)",
     year: "2025",
@@ -67,15 +75,15 @@ const projectsData = [
     link: "https://doctor-ai-gold.vercel.app/"
   },
   {
-    name: "Gavora – AI Assisted Diagnostic Telegram Bot for Migrant Women",
+    name: "Gavora – Smart Wellbeing Survey Bot",
     url: "/assets/img/gavoraa.png",
     type: "Client(NGO)",
     year: "2024",
-    description: "Gavora is an AI-powered Telegram bot that runs a confidential survey for migrant women, assessing emotional wellbeing, legal awareness, and social integration. It uses adaptive questions, allows users to skip sensitive topics, and generates personalized summaries with recommended support resources. Built with the Telegram Bot API, n8n, and Google Sheets, it prioritizes privacy, consent, and accessibility while helping NGOs deliver targeted support.",
+    description: "Gavora is an AI-powered Telegram bot conducting confidential surveys for migrant women, assessing wellbeing, legal awareness, and social integration. It uses adaptive questions, allows skipping sensitive topics, and provides personalized summaries with support resources built with Telegram Bot API, n8n, and Google Sheets, prioritizing privacy and accessibility.",
     link: "https://github.com/Ifham-Ansari"
   },
   {
-    name: "Cybersecurity Monitoring and Analytics Dashboard",
+    name: "CyberShield SIEM Analytics & Dashboard",
     url: "/assets/img/siem.png",
     type: "Client",
     year: "2025",
@@ -117,11 +125,11 @@ export default () => {
                   <div style="background-image: url(${this.url}); background-repeat: no-repeat; background-size: cover; background-position: center" class="rounded-lg h-80 max-md:h-60"></div>
                   <div class="md:flex md:justify-between md:gap-10 gap-5 max-md:grid">
                     <div class="md:grid md:gap-2 flex justify-between items-center">
-                      <div>
+                      <div class="grid">
                         <span class="uppercase text-text_two_clr">project</span>
                         <span class="md:capitalize montserrat_regular uppercase">${this.project}</span>
                       </div>
-                      <div>
+                      <div class="grid">
                         <span class="uppercase text-text_two_clr">year</span>
                         <span class="md:capitalize montserrat_regular uppercase">${this.year}</span>
                       </div>
